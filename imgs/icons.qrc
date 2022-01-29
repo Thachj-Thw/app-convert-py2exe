@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>svg/minimize.svg</file>
+    <file>svg/maximize.svg</file>
+    <file>svg/minus.svg</file>
+    <file>svg/x.svg</file>
+    <file>svg/help-circle.svg</file>
+    <file>svg/alert-octagon.svg</file>
+    <file>svg/alert-triangle.svg</file>
+    <file>svg/check-square.svg</file>
+    <file>svg/chevron-down.svg</file>
+    <file>svg/chevrons-left.svg</file>
+    <file>svg/chevrons-right.svg</file>
+    <file>svg/chevron-up.svg</file>
+    <file>svg/circle.svg</file>
+    <file>svg/disc.svg</file>
+    <file>svg/square.svg</file>
+    <file>svg/settings.svg</file>
+  </qresource>
+</RCC>
