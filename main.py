@@ -5,7 +5,6 @@ from customs import *
 from PyQt5.QtCore import QThread, pyqtSignal
 from imgs import icons
 import subprocess
-from subprocess import CREATE_NO_WINDOW, PIPE
 import os
 import shutil
 import sys
@@ -166,7 +165,7 @@ class WorkerConvert(QThread):
         self.cmd = cmd
 
     def run(self):
-        p = subprocess.Popen(self.cmd, creationflags=CREATE_NO_WINDOW, **subprocess_args())
+        p = subprocess.Popen(self.cmd, creationflags=subprocess.CREATE_NO_WINDOW, **subprocess_args())
         info = ""
         for e in p.stderr:
             info = e.decode()[:-2]
@@ -230,7 +229,7 @@ class Main(QMainWindow):
         if self.venv_path:
             pythonw = os.path.join(self.venv_path, "scripts", "pythonw.exe")
         p = subprocess.Popen([pythonw, os.path.join(DIR, "module", "version.pyw")],
-                             creationflags=CREATE_NO_WINDOW,
+                             creationflags=subprocess.CREATE_NO_WINDOW,
                              **subprocess_args())
         v = p.communicate()[0]
         if v:
